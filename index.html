@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Our Little World ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- ================================= -->
+<!-- MUSIC -->
+<!-- ================================= -->
+
+<audio id="music" loop>
+
+    <source src="music/Anuv Jain - Jo Tum Mere Ho.mp3"
+            type="audio/mpeg">
+
+</audio>
+
+
+<button class="music-button"
+        onclick="toggleMusic()">
+
+    🎵 <span id="musicText">Play Our Song</span>
+
+</button>
+
+
+<!-- ================================= -->
+<!-- BACKGROUND EFFECT -->
+<!-- ================================= -->
+
+<div class="stars"></div>
+
+<div id="heartContainer"></div>
+
+
+<!-- ================================= -->
+<!-- INTRO -->
+<!-- ================================= -->
+
+<section class="intro-screen"
+         id="intro">
+
+    <div class="intro-content">
+
+        <p class="tiny-title">
+            A LITTLE SURPRISE FOR YOU
+        </p>
+
+        <h1>
+            I Made This<br>
+            <span>Just For You ❤️</span>
+        </h1>
+
+        <p class="intro-description">
+
+            There is a little gift waiting for you...
+
+        </p>
+
+
+        <!-- GIFT BOX -->
+
+        <div class="gift-area"
+             onclick="openGift()">
+
+            <div class="gift-glow"></div>
+
+            <div class="gift-box">
+
+                <div class="lid">
+
+                    <div class="ribbon"></div>
+
+                </div>
+
+                <div class="box">
+
+                    <div class="ribbon vertical"></div>
+
+                    <div class="ribbon horizontal"></div>
+
+                </div>
+
+            </div>
+
+
+            <p class="click-text">
+
+                ✨ Click the gift ✨
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================= -->
+<!-- MAIN CONTENT -->
+<!-- ================================= -->
+
+<main id="mainContent">
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="tiny-title">
+            WELCOME TO OUR LITTLE WORLD
+        </p>
+
+        <h2>
+
+            You & Me
+
+            <span>Forever? ❤️</span>
+
+        </h2>
+
+        <p>
+
+            Every picture has a memory.<br>
+            Every memory has a story.
+
+        </p>
+
+        <button onclick="scrollToSection('memories')">
+
+            Explore Our Story ↓
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================= -->
+<!-- LOVE COUNTER -->
+<!-- ================================= -->
+
+<section class="counter-section">
+
+    <p class="tiny-title">
+        OUR LITTLE JOURNEY
+    </p>
+
+    <h2>
+        Together We Made
+    </h2>
+
+
+    <div class="counter-grid">
+
+        <div class="counter-card">
+
+            <span id="days">000</span>
+
+            <p>Days Together</p>
+
+        </div>
+
+
+        <div class="counter-card">
+
+            <span>∞</span>
+
+            <p>Beautiful Memories</p>
+
+        </div>
+
+
+        <div class="counter-card">
+
+            <span>1</span>
+
+            <p>Special Love</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================= -->
+<!-- MEMORIES -->
+<!-- ================================= -->
+
+<section class="memories"
+         id="memories">
+
+    <p class="tiny-title">
+        OUR MEMORIES
+    </p>
+
+    <h2>
+        Little Moments 📸
+    </h2>
+
+    <p class="section-description">
+
+        These moments may look small,
+        but they mean the world to me.
+
+    </p>
+
+
+    <div class="photo-grid">
+
+
+        <div class="photo-card big">
+
+            <img src="images/first.jpeg">
+
+            <div class="photo-caption">
+
+                <span>01</span>
+
+                <h3>
+                    My Favorite Memory
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="photo-card">
+
+            <img src="images/memory.jpeg">
+
+            <div class="photo-caption">
+
+                <span>02</span>
+
+                <h3>
+                    That Smile ❤️
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="photo-card">
+
+            <img src="images/fav person.jpeg">
+
+            <div class="photo-caption">
+
+                <span>03</span>
+
+                <h3>
+                    Just Us
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="photo-card">
+
+            <img src="images/little 4.jpeg">
+
+            <div class="photo-caption">
+
+                <span>04</span>
+
+                <h3>
+                    Beautiful Day
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="photo-card big">
+
+            <img src="images/little 3.jpeg">
+
+            <div class="photo-caption">
+
+                <span>05</span>
+
+                <h3>
+                    Forever Memories
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="photo-card">
+
+            <img src="images/little 1.jpeg"
+
+            <div class
+            ="photo-caption">
+
+                <span>06</span>
+
+                <h3>
+                    You & Me 💕
+                </h3>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================= -->
+<!-- LOVE REASONS -->
+<!-- ================================= -->
+
+<section class="reasons">
+
+    <p class="tiny-title">
+        JUST FOR YOU
+    </p>
+
+    <h2>
+        Why You Are Special ❤️
+    </h2>
+
+
+    <div class="reason-container">
+
+
+        <div class="reason-card">
+
+            <div class="reason-icon">
+                🥰
+            </div>
+
+            <h3>
+                Your Smile
+            </h3>
+
+            <p>
+                Your smile can make
+                even my worst day better.
+            </p>
+
+        </div>
+
+
+
+        <div class="reason-card">
+
+            <div class="reason-icon">
+                🤍
+            </div>
+
+            <h3>
+                Your Heart
+            </h3>
+
+            <p>
+                You have a beautiful heart
+                and I love that about you.
+            </p>
+
+        </div>
+
+
+
+        <div class="reason-card">
+
+            <div class="reason-icon">
+                🫶
+            </div>
+
+            <h3>
+                Your Presence
+            </h3>
+
+            <p>
+                Somehow everything feels
+                better when you are around.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================= -->
+<!-- FINAL LETTER -->
+<!-- ================================= -->
+
+<section class="final-section">
+
+    <div class="final-card">
+
+        <div class="envelope">
+            💌
+        </div>
+
+        <p class="tiny-title">
+            ONE LAST SURPRISE
+        </p>
+
+        <h2>
+            I Have Something To Tell You
+        </h2>
+
+        <button onclick="openLetter()">
+
+            Open My Heart ❤️
+
+        </button>
+
+
+        <div class="letter"
+             id="letter">
+
+            <h3>
+                Dear My Favorite Person,
+            </h3>
+
+            <p>
+
+                I don't know if words can ever explain
+                how special you are to me.
+
+            </p>
+
+            <p>
+
+                Thank you for all the smiles,
+                conversations, memories and
+                little moments we have shared.
+
+            </p>
+
+            <p>
+
+                You are not just a part of my story.
+                You became one of my favorite chapters.
+
+            </p>
+
+            <p>
+
+                Wherever life takes us,
+                I hope we continue creating
+                beautiful memories together.
+
+            </p>
+
+            <h3 class="signature">
+
+                With all my love ❤️
+
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================= -->
+<!-- FOOTER -->
+<!-- ================================= -->
+
+<footer>
+
+    Made with ❤️ by someone who loves you
+
+</footer>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

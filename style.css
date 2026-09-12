@@ -1,0 +1,947 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    background: #10070d;
+
+    color: white;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ============================= */
+/* MUSIC BUTTON */
+/* ============================= */
+
+.music-button {
+
+    position: fixed;
+
+    top: 25px;
+    right: 25px;
+
+    z-index: 1000;
+
+    border: 1px solid rgba(255,255,255,.3);
+
+    background: rgba(255,255,255,.1);
+
+    backdrop-filter: blur(15px);
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+}
+
+
+/* ============================= */
+/* INTRO */
+/* ============================= */
+
+.intro-screen {
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #5b1d36,
+            #1b0912 45%,
+            #080308
+        );
+
+}
+
+
+.intro-content {
+
+    z-index: 5;
+
+}
+
+
+.tiny-title {
+
+    letter-spacing: 5px;
+
+    font-size: 11px;
+
+    color: #e99bb4;
+
+    font-weight: 600;
+
+}
+
+
+.intro h1 {
+
+    font-family: "Dancing Script";
+
+    font-size: clamp(65px, 10vw, 120px);
+
+    line-height: .9;
+
+    margin: 30px 0;
+
+}
+
+
+.intro h1 span {
+
+    color: #ff789e;
+
+}
+
+
+.intro-description {
+
+    color: #d9aebd;
+
+}
+
+
+/* ============================= */
+/* GIFT BOX */
+/* ============================= */
+
+.gift-area {
+
+    margin-top: 55px;
+
+    cursor: pointer;
+
+    position: relative;
+
+}
+
+
+.gift-box {
+
+    width: 170px;
+
+    height: 140px;
+
+    position: relative;
+
+    margin: auto;
+
+}
+
+
+.box {
+
+    width: 170px;
+
+    height: 100px;
+
+    position: absolute;
+
+    bottom: 0;
+
+    background: linear-gradient(
+        135deg,
+        #e94470,
+        #9e1e4a
+    );
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 20px 50px rgba(255,40,100,.4);
+
+}
+
+
+.lid {
+
+    width: 190px;
+
+    height: 40px;
+
+    position: absolute;
+
+    top: 0;
+
+    left: -10px;
+
+    z-index: 3;
+
+    background: linear-gradient(
+        135deg,
+        #ff628d,
+        #b52250
+    );
+
+    border-radius: 5px;
+
+    transform-origin: left bottom;
+
+    transition: 1s ease;
+
+}
+
+
+.ribbon {
+
+    position: absolute;
+
+    width: 25px;
+
+    height: 100%;
+
+    background: #ffd0dc;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+}
+
+
+.ribbon.horizontal {
+
+    width: 100%;
+
+    height: 20px;
+
+    left: 0;
+
+    top: 40%;
+
+    transform: none;
+
+}
+
+
+.gift-area:hover .gift-box {
+
+    animation: giftShake .5s infinite alternate;
+
+}
+
+
+@keyframes giftShake {
+
+    from {
+        transform: rotate(-2deg);
+    }
+
+    to {
+        transform: rotate(2deg);
+    }
+
+}
+
+
+.gift-area.opened .lid {
+
+    transform:
+        rotate(-35deg)
+        translate(-10px,-30px);
+
+}
+
+
+.gift-area.opened .gift-box {
+
+    animation: none;
+
+}
+
+
+.click-text {
+
+    margin-top: 25px;
+
+    color: #ffadc3;
+
+    animation: pulse 1.5s infinite;
+
+}
+
+
+@keyframes pulse {
+
+    50% {
+        opacity: .5;
+        transform: scale(1.05);
+    }
+
+}
+
+
+/* ============================= */
+/* MAIN CONTENT */
+/* ============================= */
+
+#mainContent {
+
+    display: none;
+
+}
+
+
+.hero {
+
+    height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 40%,
+            #66203f,
+            #170a11 60%,
+            #080308
+        );
+
+}
+
+
+.hero h2 {
+
+    font-family: "Dancing Script";
+
+    font-size: clamp(70px, 11vw, 130px);
+
+    line-height: .8;
+
+    margin: 25px 0;
+
+}
+
+
+.hero h2 span {
+
+    display: block;
+
+    color: #ff719b;
+
+    font-size: .6em;
+
+    margin-top: 25px;
+
+}
+
+
+.hero p {
+
+    color: #d7a9b9;
+
+    line-height: 1.8;
+
+}
+
+
+button {
+
+    margin-top: 30px;
+
+    padding: 15px 28px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #ed527c;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+button:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 40px rgba(237,82,124,.4);
+
+}
+
+
+/* ============================= */
+/* COUNTER */
+/* ============================= */
+
+.counter-section {
+
+    text-align: center;
+
+    padding: 130px 8%;
+
+    background: #12080e;
+
+}
+
+
+.counter-section h2,
+.memories h2,
+.reasons h2,
+.final-card h2 {
+
+    font-family: "Dancing Script";
+
+    font-size: 65px;
+
+    margin: 10px 0;
+
+}
+
+
+.counter-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 25px;
+
+    max-width: 900px;
+
+    margin: 60px auto;
+
+}
+
+
+.counter-card {
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.02)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+}
+
+
+.counter-card span {
+
+    font-family: "Dancing Script";
+
+    font-size: 65px;
+
+    color: #ff719b;
+
+}
+
+
+.counter-card p {
+
+    color: #cba7b4;
+
+}
+
+
+/* ============================= */
+/* MEMORIES */
+/* ============================= */
+
+.memories {
+
+    padding: 130px 7%;
+
+    background:
+        linear-gradient(
+            #170a11,
+            #2b0d1c
+        );
+
+    text-align: center;
+
+}
+
+
+.section-description {
+
+    color: #c7a3b0;
+
+    margin-bottom: 70px;
+
+}
+
+
+.photo-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 20px;
+
+}
+
+
+.photo-card {
+
+    height: 330px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+}
+
+
+.photo-card.big {
+
+    height: 430px;
+
+}
+
+
+.photo-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 1s;
+
+}
+
+
+.photo-card:hover img {
+
+    transform: scale(1.12);
+
+}
+
+
+.photo-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            transparent 40%,
+            rgba(0,0,0,.8)
+        );
+
+}
+
+
+.photo-caption {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 25px;
+
+    z-index: 2;
+
+    text-align: left;
+
+}
+
+
+.photo-caption span {
+
+    color: #ff719b;
+
+}
+
+
+.photo-caption h3 {
+
+    font-family: "Dancing Script";
+
+    font-size: 30px;
+
+}
+
+
+/* ============================= */
+/* REASONS */
+/* ============================= */
+
+.reasons {
+
+    padding: 130px 8%;
+
+    text-align: center;
+
+    background: #10070d;
+
+}
+
+
+.reason-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    max-width: 1000px;
+
+    margin: 60px auto;
+
+    gap: 25px;
+
+}
+
+
+.reason-card {
+
+    padding: 45px 30px;
+
+    border-radius: 30px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #28121c,
+            #160910
+        );
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    transition: .5s;
+
+}
+
+
+.reason-card:hover {
+
+    transform:
+        translateY(-15px)
+        rotate(1deg);
+
+}
+
+
+.reason-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.reason-card h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.reason-card p {
+
+    color: #bd9ca9;
+
+    line-height: 1.7;
+
+}
+
+
+/* ============================= */
+/* FINAL */
+/* ============================= */
+
+.final-section {
+
+    padding: 150px 8%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #602039,
+            #13070d 65%
+        );
+
+    text-align: center;
+
+}
+
+
+.final-card {
+
+    max-width: 750px;
+
+    margin: auto;
+
+}
+
+
+.envelope {
+
+    font-size: 75px;
+
+    animation: floating 2s infinite ease-in-out;
+
+}
+
+
+@keyframes floating {
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+.letter {
+
+    display: none;
+
+    margin-top: 50px;
+
+    padding: 50px;
+
+    border-radius: 30px;
+
+    text-align: left;
+
+    background: #fff6f9;
+
+    color: #381923;
+
+    animation: letterOpen 1s ease;
+
+}
+
+
+@keyframes letterOpen {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(40px)
+            scale(.9);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+.letter h3 {
+
+    font-family: "Dancing Script";
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.letter p {
+
+    color: #694c58;
+
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+
+}
+
+
+.signature {
+
+    color: #d94f78;
+
+}
+
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer {
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: #080308;
+
+    color: #896775;
+
+}
+
+
+/* ============================= */
+/* FLOATING HEARTS */
+/* ============================= */
+
+.floating-heart {
+
+    position: fixed;
+
+    bottom: -30px;
+
+    pointer-events: none;
+
+    z-index: 999;
+
+    animation:
+        floatUp 7s linear forwards;
+
+}
+
+
+@keyframes floatUp {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+        opacity: 0;
+
+    }
+
+    20% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media(max-width:768px) {
+
+    .counter-grid,
+    .reason-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .photo-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .photo-card,
+    .photo-card.big {
+
+        height: 400px;
+
+    }
+
+
+    .counter-section h2,
+    .memories h2,
+    .reasons h2,
+    .final-card h2 {
+
+        font-size: 50px;
+
+    }
+
+
+    .music-button {
+
+        top: 15px;
+
+        right: 15px;
+
+        padding: 10px 14px;
+
+    }
+
+}
